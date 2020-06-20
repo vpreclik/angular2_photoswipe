@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterContentInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { NgpService } from '../ngp.service';
 
 @Component({
@@ -6,13 +6,13 @@ import { NgpService } from '../ngp.service';
   templateUrl: './lightbox.component.html',
   styleUrls: ['./lightbox.component.scss']
 })
-export class LightboxComponent implements AfterContentInit {
+export class LightboxComponent implements AfterViewInit {
 
   @ViewChild('ngpLightbox') el: ElementRef;
 
   constructor(private ngp: NgpService) {}
 
-  ngAfterContentInit() {
+  ngAfterViewInit() {
     this.ngp.LightboxElement = this.el;
   }
 

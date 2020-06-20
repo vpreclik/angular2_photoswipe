@@ -8,4 +8,8 @@ export class NgpService {
   LightboxElement: ElementRef;
 
   constructor() { }
+
+  public toString = () : string => {
+    return `NpgSVN (${this.LightboxElement})`;
+}
 }
